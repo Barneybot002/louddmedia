@@ -1,0 +1,17 @@
+{
+  "name": "loudmedia-site",
+  "version": "1.0.0",
+  "description": "LoudMedia.ca landing site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "loudmedia",
+    "rock",
+    "metal"
+  ],
+  "author": "",
+  "license": "UNLICENSED"
+}

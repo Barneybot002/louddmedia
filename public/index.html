@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LOUDMEDIA.CA is Canada's independent rock and metal ecosystem for bands, fans, and street teams.">
+  <title>LOUDMEDIA.CA - Making Canadian Rock & Metal Louder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css?v=2">
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <audio id="site-audio" loop preload="auto" autoplay>
+    <source src="/assets/audio/site-track.m4a" type="audio/mp4">
+  </audio>
+
+  <header class="site-header" id="site-header">
+    <a href="#top" class="nav-logo" aria-label="LoudMedia.ca home">LOUD<span>MEDIA</span>.CA</a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <a href="#story">Story</a>
+      <a href="#what">For Bands</a>
+      <a href="#announcements">News</a>
+      <a href="#tickets">Tickets</a>
+      <a href="#vision">Vision</a>
+    </nav>
+    <a href="#join" class="nav-cta">Join Movement</a>
+  </header>
+
+  <main id="top">
+    <div class="logo-banner" aria-label="LoudMedia banner">
+      <img src="/assets/images/logo-banner.jpeg" alt="LoudMedia.ca - Making Canadian Rock and Metal Louder" data-fallback="banner">
+      <div class="image-fallback">
+        <p>Upload your main banner image to <strong>public/assets/images/logo-banner.jpeg</strong></p>
+      </div>
+    </div>
+
+    <section id="hero" class="hero">
+      <div class="hero-scanlines" aria-hidden="true"></div>
+      <div class="hero-label">Canada's Independent Rock & Metal Ecosystem</div>
+      <h1 class="hero-title">
+        LOUD
+        <span class="line2">MEDIA</span>
+        <span class="outline">Making Canada Louder</span>
+      </h1>
+      <p class="hero-sub">A connected home where bands grow, fans discover, and street teams amplify the underground scene together. For bands. For fans. For the scene.</p>
+      <div class="hero-actions">
+        <a href="#join" class="btn-primary">Join the Movement</a>
+        <a href="#what" class="btn-ghost">Submit Your Band</a>
+      </div>
+      <div class="hero-ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Canadian Rock</span><span>Independent Metal</span><span>Underground Scene</span><span>Alberta & Beyond</span><span>Street Teams</span><span>Band Submissions Open</span>
+          <span>Canadian Rock</span><span>Independent Metal</span><span>Underground Scene</span><span>Alberta & Beyond</span><span>Street Teams</span><span>Band Submissions Open</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="music-player" aria-label="Featured audio player">
+      <div class="disc-wrap">
+        <div class="disc paused" id="disc"></div>
+        <div class="disc-shine"></div>
+      </div>
+      <div class="player-info">
+        <div class="player-label">Now Playing</div>
+        <div class="player-song">Kiss Alive III</div>
+        <div class="player-artist">KISS - Featured on LoudMedia.ca</div>
+        <div class="player-controls">
+          <button class="ctrl-btn play-btn" id="play-btn" type="button" aria-label="Play audio">▶</button>
+          <div class="player-waveform paused" id="waveform" aria-hidden="true">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discovery" aria-labelledby="discovery-title">
+      <div class="discovery-inner reveal">
+        <div class="section-tag" id="discovery-title">Canadian Rock Radar</div>
+        <div class="discovery-img-wrap">
+          <img src="/assets/images/discovery-radar.jpeg" alt="LoudMedia Canadian Rock Radar feature" data-fallback="discovery">
+          <div class="image-fallback">
+            <p>Upload this image to <strong>public/assets/images/discovery-radar.jpeg</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story">
+      <div class="story-text reveal">
+        <div class="section-tag">The Story</div>
+        <h2 class="section-title">Built for the Bands the Industry Overlooks</h2>
+        <p>Canadian rock and metal has always had a problem: incredible bands, fragmented support. Too many artists are buried under algorithms, struggling to access media exposure, promotion tools, grants, and real community support.</p>
+        <p>LoudMedia.ca exists to connect all of it: a platform where bands gain visibility, fans discover the next wave of heavy music, and street teams help amplify artists across Canada.</p>
+        <p>Not another generic music site. Not another empty social platform. A real ecosystem built specifically for Canada's underground heavy scene.</p>
+      </div>
+      <div class="story-stat-grid reveal">
+        <div class="stat-card"><div class="stat-num">500<span>+</span></div><div class="stat-label">Canadian Bands</div></div>
+        <div class="stat-card"><div class="stat-num">10<span>K</span></div><div class="stat-label">Scene Members</div></div>
+        <div class="stat-card"><div class="stat-num">12<span>+</span></div><div class="stat-label">Provinces Reached</div></div>
+        <div class="stat-card"><div class="stat-num">100<span>%</span></div><div class="stat-label">Independent Focus</div></div>
+      </div>
+    </section>
+
+    <section id="what" class="what">
+      <div class="what-header">
+        <div>
+          <div class="section-tag">What LoudMedia Does</div>
+          <h2 class="section-title">Built for Every Part<br>of the Scene</h2>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Audience tabs">
+          <button class="tab active" type="button" role="tab" aria-selected="true" aria-controls="panel-bands" data-tab="bands">For Bands</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-fans" data-tab="fans">For Fans</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="panel-street" data-tab="street">Street Teams</button>
+        </div>
+      </div>
+
+      <div id="panel-bands" class="panel active" role="tabpanel">
+        <article class="feature-card reveal"><span class="feature-icon">GTR</span><h3>Professional Media Kits</h3><p>Build polished, label-quality media kits that get you taken seriously by venues, promoters, and press.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">RAD</span><h3>Features & Playlists</h3><p>Submit your music for editorial features, curated playlists, and scene spotlights that reach real fans.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">FND</span><h3>Grants & Funding</h3><p>Access curated guides on Canadian music grants, funding opportunities, and resources usually locked behind labels.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">TRK</span><h3>Visibility Tracking</h3><p>Track your engagement, reach, and momentum across the LoudMedia ecosystem with real analytics.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">STM</span><h3>Connect with Street Teams</h3><p>Get matched with dedicated fans who promote your shows, share your music, and build your local following.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">PRO</span><h3>Premium Promo Tools</h3><p>Unlock promo templates, social toolkits, and campaign guides designed for the heavy music space.</p></article>
+      </div>
+
+      <div id="panel-fans" class="panel" role="tabpanel" hidden>
+        <article class="feature-card reveal"><span class="feature-icon">DSC</span><h3>Discover New Bands</h3><p>Find emerging Canadian rock and metal acts before they blow up.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">PLY</span><h3>Underground Playlists</h3><p>Dig into curated playlists of underground releases, genre-specific drops, and scene highlights.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">SHW</span><h3>Local Shows & Festivals</h3><p>Never miss a local show again: discover gigs, festivals, and scene events happening near you.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">NEW</span><h3>Scene News & Interviews</h3><p>Stay up to date with scene news, band interviews, album reviews, and exclusive underground content.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">POL</span><h3>Interactive Features</h3><p>Engage through polls, community challenges, and interactive content.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">COM</span><h3>Community & Discord</h3><p>Join discussions, Discord events, and a real community of Canadian heavy music fans.</p></article>
+      </div>
+
+      <div id="panel-street" class="panel" role="tabpanel" hidden>
+        <article class="feature-card reveal"><span class="feature-icon">AMP</span><h3>Social Sharing Campaigns</h3><p>Get access to coordinated campaigns to amplify bands you love.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">TIX</span><h3>Show Promotion</h3><p>Help promote local shows, sell tickets, and build buzz in your city.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">VIP</span><h3>Earn Rewards & Perks</h3><p>Contributors earn recognition, exclusive rewards, merch, and VIP perks.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">MSN</span><h3>Community Missions</h3><p>Complete missions, unlock achievements, and level up your impact.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">VIR</span><h3>Content Amplification</h3><p>Help bands spread with coordinated content drops and fan-driven amplification tools.</p></article>
+        <article class="feature-card reveal"><span class="feature-icon">INF</span><h3>Real Influence</h3><p>Your activity shapes what gets featured. Active street team members have direct influence on the platform.</p></article>
+      </div>
+    </section>
+
+    <section id="announcements" class="announcements">
+      <div class="section-tag reveal">Latest News</div>
+      <h2 class="section-title reveal">Announcements</h2>
+      <div class="announce-grid">
+        <article class="announce-card featured reveal">
+          <div class="announce-tag">Featured - Platform Launch</div>
+          <h3>LoudMedia.ca Goes Live - Submissions Now Open for Canadian Bands</h3>
+          <p>After months of development, LoudMedia is officially open. Canadian independent rock and metal artists can now submit their bands, build media kits, and connect with the growing community.</p>
+          <div class="announce-date">May 2025 - LoudMedia Editorial Team</div>
+        </article>
+        <article class="announce-card reveal">
+          <div class="announce-tag">Scene Spotlight</div>
+          <h3>Alberta Underground Roundup: 10 Bands You Need to Hear</h3>
+          <p>Our first editorial deep dive into Alberta's thriving underground heavy scene.</p>
+          <div class="announce-date">April 2025</div>
+        </article>
+        <article class="announce-card reveal">
+          <div class="announce-tag">Street Teams</div>
+          <h3>Street Team Beta Program Now Accepting Applications</h3>
+          <p>We're building our founding street team network. Apply now to earn early adopter status and exclusive rewards.</p>
+          <div class="announce-date">March 2025</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="tickets" class="tickets">
+      <div class="section-tag reveal">Upcoming Shows</div>
+      <h2 class="section-title reveal">Get Tickets</h2>
+      <div class="tickets-grid">
+        <article class="ticket-card reveal">
+          <h3>The Rec Room</h3>
+          <div class="ticket-city">Calgary, AB</div>
+          <div class="ticket-date"><div>14</div><span>June<br>2025</span></div>
+          <p>LoudMedia Presents: Alberta Underground Night Vol.1</p>
+          <button class="ticket-btn" type="button">Get Tickets</button>
+        </article>
+        <article class="ticket-card reveal">
+          <h3>Starlite Room</h3>
+          <div class="ticket-city">Edmonton, AB</div>
+          <div class="ticket-date"><div>21</div><span>June<br>2025</span></div>
+          <p>Independent Metal Showcase - 5 Bands, One Night</p>
+          <button class="ticket-btn" type="button">Get Tickets</button>
+        </article>
+        <article class="ticket-card reveal">
+          <h3>Dickens Pub</h3>
+          <div class="ticket-city">Calgary, AB</div>
+          <div class="ticket-date"><div>05</div><span>July<br>2025</span></div>
+          <p>Heavy Summer Series - Rock & Metal Festival</p>
+          <button class="ticket-btn" type="button">Get Tickets</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="vision" class="vision">
+      <div class="vision-content">
+        <div class="section-tag centered">Our Vision</div>
+        <h2>Not Just Media.<br>Infrastructure.</h2>
+        <div class="vision-pillars">
+          <span>Artists Support Artists</span>
+          <span>Fans Become Advocates</span>
+          <span>Communities Collaborate</span>
+          <span>Resources Accessible to All</span>
+          <span>Visibility Shared, Not Gatekept</span>
+        </div>
+        <a href="#join" class="btn-dark">Join the Movement</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="join" class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">LOUD<span>MEDIA</span>.CA</div>
+        <p>Canada's independent rock and metal ecosystem. Building the digital backbone for independent Canadian heavy music, starting in Alberta and expanding nationwide.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="#what">For Bands</a><a href="#what">For Fans</a><a href="#what">Street Teams</a><a href="#what">Submit Your Band</a>
+      </div>
+      <div class="footer-col">
+        <h4>Scene</h4>
+        <a href="#announcements">News & Features</a><a href="#tickets">Upcoming Shows</a><a href="#what">Playlists</a><a href="#story">Grants Guide</a>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <a href="#">Discord</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LoudMedia.ca - Making Canadian Rock & Metal Louder</p>
+      <div class="social-links">
+        <a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Discord</a><a href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
