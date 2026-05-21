@@ -295,44 +295,6 @@
   }
 }());
 
-(function setupAudio() {
-  const audio = document.getElementById('site-audio');
-  const disc = document.getElementById('disc');
-  const playBtn = document.getElementById('play-btn');
-  const waveform = document.getElementById('waveform');
-  let playing = false;
-
-  function setPlaying(state) {
-    playing = state;
-    playBtn.textContent = playing ? 'II' : '▶';
-    playBtn.setAttribute('aria-label', playing ? 'Pause audio' : 'Play audio');
-    disc.classList.toggle('paused', !playing);
-    waveform.classList.toggle('paused', !playing);
-  }
-
-  playBtn.addEventListener('click', () => {
-    if (playing) {
-      audio.pause();
-      setPlaying(false);
-      return;
-    }
-
-    audio.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
-  });
-
-  function tryAutoplay() {
-    audio.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', tryAutoplay, { once: true });
-  } else {
-    tryAutoplay();
-  }
-
-  window.addEventListener('load', tryAutoplay, { once: true });
-}());
-
 (function setupTabs() {
   const tabs = document.querySelectorAll('.tab');
   const panels = document.querySelectorAll('.panel');
